@@ -120,14 +120,14 @@ class GambleSpider(object):
         return result
 
 # 测试代码
-# if __name__ == '__main__':
-#     spider = GambleSpider()
-#     soup = spider.get_soup_from_url('https://odds.500.com/fenxi/ouzhi-990213.shtml')
-#     url = spider.get_next_url(soup, '立博')
-#     odds = spider.get_now_odds(soup, '立博')
-#     json = spider.get_json_from_url(url)
-#     result = spider.parse_json_to_result(json, odds)
-#     print(result.get('like'))
+if __name__ == '__main__':
+    spider = GambleSpider()
+    soup = spider.get_soup_from_url('https://odds.500.com/fenxi/ouzhi-990213.shtml')
+    url = spider.get_next_url(soup, '立博')
+    odds = spider.get_now_odds(soup, '立博')
+    json = spider.get_json_from_url(url)
+    result = spider.parse_json_to_result(json, odds)
+    print(result.get('like'))
 
 
 
